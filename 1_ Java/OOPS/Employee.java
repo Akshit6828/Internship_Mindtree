@@ -1,12 +1,11 @@
 import java.util.Scanner;
 
-
 public class Employee {
 
-    public String empName;
-    public int empId;
-    public String empDept;
-    public String empDesig;
+    private String empName;
+    private int empId;
+    private String empDept;
+    private String empDesig;
 
     public Employee(int empId, String empName, String empDept, String empDesig) {
         this.empName = empName;
@@ -60,14 +59,17 @@ public class Employee {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        Employee e1 = new Employee(6828, "Akshit", "Digital" , "Lead");
-        if(e1 ==null)
+        // Checking for NullPointerException if the object calling setempName() is null. If null, it will throw NullPointerException.
+        // Note: Checking for e1 == null will bring dead code while printing the message. Thus try-catch should be used.
+        try { 
+            Employee e1 = new Employee(6828, "Akshit", "Digital" , "Lead");
+            System.out.println(e1.getempName());
+            System.out.println(e1.getempId());
+            System.out.println(e1.getempDept());
+            System.out.println(e1.getempDesig());
+        } catch (Exception e) { 
+            // Handling excpetion with user friendly message.
             System.out.println("Employee object is null. Cannot set name for it");
-        else{
-        System.out.println(e1.getempName());
-        System.out.println(e1.getempId());
-        System.out.println(e1.getempDept());
-        System.out.println(e1.getempDesig());
         }
         sc.close();
     }

@@ -6,7 +6,7 @@ Uses:
 2) Changing the access modifier of the variables at the place where it is initialized / implemented and NOT changing at every place it is used.
 3) To provide READ-ONLY and WRITE-ONLY access to data of a class by Adding/ Deleting the Getters and Setters and making the things private.
 */ 
-public class Encapsulation {
+public class TestEncapsulation {
     public static void main(String[] args) {
     plant Rose = new plant();
     Rose.setColor("Red");
