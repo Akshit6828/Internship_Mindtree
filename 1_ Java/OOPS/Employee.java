@@ -1,6 +1,5 @@
-package OOPS;
-
 import java.util.Scanner;
+
 
 public class Employee {
 
@@ -22,7 +21,8 @@ public class Employee {
 
     public void setempName(String empName) {
         if(empName == null)
-            System.out.println("Name cannot be Null");        
+            System.out.println("Name cannot be NULL. Invalid Input!");
+        else
         this.empName = empName;
     }
 
@@ -39,7 +39,10 @@ public class Employee {
     }
 
     public void setempDept(String empDept) {
-        this.empDept = empDept;
+        if(empDept !=null && ( empDept.equals("TTH") || empDept.equals("RCM") || empDept.equals("DevOps") || empDept.equals("Digital") ))
+            this.empDept = empDept;
+        else
+            System.out.println("Invalid Department!");
     }
 
     public String getempDesig() {
@@ -47,24 +50,25 @@ public class Employee {
     }
 
     public void setempDesig(String empDesig) {
-        this.empDesig = empDesig;
-    }
+        if(empDesig!=null && (empDesig.equals("Lead") || empDesig.equals("Manager") || empDesig.equals("Developer") || empDesig.equals("Tester") ))
+            this.empDesig = empDesig;
+        else
+            System.out.println("Invalid Designation!");
 
-    public Employee() {
     }
-
 
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        Employee e = new Employee();
-        e.setempName("AKKI");
-       /* e.setempId(1074);
-        e.setempDept("IT");
-        e.setempDesig("SDE");
-        System.out.println(e.getempName());
-        System.out.println(e.getempId());
-        System.out.println(e.getempDept());
-        System.out.println(e.getempDesig());*/
+        Employee e1 = new Employee(6828, "Akshit", "Digital" , "Lead");
+        if(e1 ==null)
+            System.out.println("Employee object is null. Cannot set name for it");
+        else{
+        System.out.println(e1.getempName());
+        System.out.println(e1.getempId());
+        System.out.println(e1.getempDept());
+        System.out.println(e1.getempDesig());
+        }
         sc.close();
     }
 }

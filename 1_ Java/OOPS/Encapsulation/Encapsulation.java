@@ -1,3 +1,4 @@
+
 /*
 Encapulation is the process of hiding the implementation details of a class.
 Uses:
