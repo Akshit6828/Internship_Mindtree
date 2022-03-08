@@ -24,7 +24,7 @@ class Customer {
                 + this.custBalance;
     }
 
-
+    // Constructor overloading
     Customer(int custId, String custName, String custAddress, String accType, double custBalance) {
         this.custId = custId;
         this.custName = custName;
@@ -44,3 +44,11 @@ class Customer {
         this.custName = custName;
     }
 }
+
+Customer Details are:
+Customer 1:
+Customer Id: 1001, Customer Name:Kumar, Customer Address: Rajajinagar, Banglore - 10, Customer Account Type: null, Customer Balance: 0.0
+Customer 2:
+Customer Id: 1002, Customer Name:Raja, Customer Address: null, Customer Account Type: null, Customer Balance: 0.0
+Customer 3:
+Customer Id: 1003, Customer Name:Sthis.hanthi, Customer Address: Jayanagar, Banglore - 20, Customer Account Type: SB, Customer Balance: 1500.0

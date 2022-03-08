@@ -4,7 +4,7 @@ public class BookStore {
         Book book2 = new Book("Joseph Conrad", "Heart of Darkness", 12.80, 1902);
         Book book3 = new Book("Pat Conroy", "Beach Music", 9.50, 1996);
 
-        System.out.println("Book details are\n");
+        System.out.println("Book details are");
         System.out.println("Book 1: " + book1.getTitle() + " by " + book1.getAuthor() + " (" + book1.getYearOfPublication() + ")");
         System.out.println("Book 2: " + book2.getTitle() + " by " + book2.getAuthor() + " (" + book2.getYearOfPublication() + ")");
         System.out.println("Book 3: " + book3.getTitle() + " by " + book3.getAuthor() + " (" + book3.getYearOfPublication() + ")");
