@@ -2,4 +2,4 @@
 *.exe
 *.bin
 .cph/
-/.vscode
+**/.vscode
