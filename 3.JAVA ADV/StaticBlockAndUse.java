@@ -20,7 +20,7 @@ class StaticImplementation {
     }
 }
 
-public class Main {
+public class StaticBlockAndUse {
     public static void main(String[] args) {
         StaticImplementation[] arr = new StaticImplementation[3];
         Scanner sc = new Scanner(System.in);
