@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>First File</title>
+  </head>
+  <body>
+    <h1 id="test">First File</h1>
+    <h1 id="sentence">Akshit Mangotra is Cool!</h1>
+    <p>This is the first file.</p>
+
+    <script>
+      // Variables
+      var name = "Akshit Mangotra";
+      alert("Hello my name is " + name);
+      var age = 20.6;
+      alert("I am " + age + " years old.");
+      console.log("Name = ", name, "Age = ", age);
+      console.warn("This is a warning.");
+      console.error("This is an error.");
+
+      // Selecting HTML Elements
+      var headerVal = document.getElementById("test");
+      var oldText = headerVal.innerHTML;
+      headerVal.innerHTML = "Contents Changed!";
+
+      alert(oldText.toLowerCase());
+      var sentenceNode = document.getElementById("sentence");
+      var sentence = sentenceNode.innerText;
+      var upperSentence = sentence.toUpperCase();
+      var lowerSentence = sentence.toLowerCase();
+      var firstElevenChars = sentence.substr(0, 11);
+      var allWords = sentence.split(" ");
+      console.log(allWords);
+      
+    </script>
+  </body>
+</html>
