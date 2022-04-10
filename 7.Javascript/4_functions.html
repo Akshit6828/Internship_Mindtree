@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>First File</title>
+  </head>
+  <body>
+    <h1 id="header">First File</h1>
+    <h2 id="text">Akshit Mangotra is Cool!</h2>
+
+    <p>This is the first file.</p>
+
+    <script>
+      // Functions: Used to perform a task:
+      function $(id) {
+        return document.getElementById(id);
+      }
+      function updatedTextById(id, text) {
+        if (document.getElementById(id) != null){
+          document.getElementById(id).innerHTML = text;
+          return true;
+        }
+        return false;
+      }
+      var element = $("header");
+      console.log(element);
+      var updatedText = "H1 header text =  " + element;
+      console.log(updatedText);
+      text.innerHTML = updatedText;
+      if(updatedTextById("text", "Amisha Sahu"))
+        console.log(true);
+    </script>
+  </body>
+</html>

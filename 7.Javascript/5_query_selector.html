@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>First File</title>
+  </head>
+  <body>
+
+    <!-- 
+        CSS: 
+        .abc = class
+        #abc = id
+        abc = element
+
+    -->
+    <small>This is the first small!</small>
+    <h3 class="line1">This is first line text for class</h3>
+    <h3 class="line2">
+      This is second line
+      <small>for an element inside class.</small>
+    </h3>
+    <p>This is third line text for element.</p>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <input type="text" style = "padding: 30px; font-size: 20px;"
+    class="form-control"  value="Akki">
+
+
+    <script>
+      // Class names are always referenced by .(dot) operator.
+      var class1 = document.querySelector(".line1");
+      class1.innerHTML =
+        "This is first Line changed by class name using query selector.";
+      // Accessing the inner element of the class by query selector
+      var class2 = document.querySelector(".line2");
+      var classInnerSmallText = class2.querySelector("small");
+      classInnerSmallText.innerHTML = "changed inner small!";
+
+      /* 
+        innerTEXT vrs innerHTML
+        
+        var header = document.createElement("header");
+        header.innerText = "<h1>Hello</h1>"; // it's return (<h1>Hello</h1>)
+        header.innerHTML = "<h1>Hello</h1>"; // it's retrun (Hello)
+    */
+
+        var lists = document.querySelectorAll("li");
+        // Makes an array of selected queries
+        lists[2].innerText = "Changed 3rd Text";
+
+        // Getting value form a text- input
+        var inp = document.querySelector(".form-control");
+        var name  = inp.value;
+        console.log("Name entered = ", name);
+    </script>
+  </body>
+</html>

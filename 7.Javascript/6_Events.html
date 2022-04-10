@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Events File</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      style="padding: 30px; font-size: 20px"
+      class="form-control"
+      placeholder="Enter any Number!"
+    />
+
+    <button
+      class="btn btn-primary"
+      style="background-color: darkcyan; color: crimson; font-size: 20px"
+      onclick="multiply()"
+    >
+      Calculate!
+    </button>
+    
+    <h1>Total = <span>N/A</span></h1>
+    
+    <script>
+      function multiply(){
+          var classElement = document.querySelector(".form-control");
+          var value = Number (classElement.value);
+          var totalValue = value + 100;
+
+          // Writing to total
+          var show = document.querySelectorAll("h1")[0];
+          show.innerHTML = "Total Value = " + totalValue;
+      }
+    </script>
+  </body>
+</html>
