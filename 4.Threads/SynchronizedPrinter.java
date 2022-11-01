@@ -71,6 +71,7 @@ public class SynchronizedPrinter{
        // So no other thread can acquire the lock on the same object.
        // This is called as a "Synchronized Method".
 
+       System.out.println(" ---- Hey Sakshi, Your documents are printing at the back ---- ");
        System.out.println(" ---- App Finished ---- ");
     }
 }
